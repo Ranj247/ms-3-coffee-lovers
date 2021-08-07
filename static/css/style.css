@@ -1,0 +1,57 @@
+/* CSS HEX */
+/* 
+cafe-noir: #553a27ff;
+manatee: #95a2bdff;
+Navbar color: #717e99ff;
+light-periwinkle: #ccd6ebff;
+sapphire: #2354b8ff; 
+*/
+
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* General style */
+body {
+  font-family: 'Oswald', Roboto;
+  font-size: 1rem;
+  background-color: white;
+  color: #000;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* ------------------HOME PAGE------------------ */
+
+/* navigation section */
+
+#nav-tab {
+  background-color: #717e99ff;
+}
+
+#nav-tab #logo {
+  color: #ffffff;
+}
+
+#nav-tab #logo:hover {
+  color: #000;
+}
+
+#nav-menu a {
+  color: #ffffff;
+}
+
+#nav-menu a:hover {
+  color: #000;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}

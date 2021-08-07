@@ -21,10 +21,10 @@ body {
 body {
   font-family: 'Oswald', Roboto;
   font-size: 1rem;
-  background-color: white;
+  background-color: #ffffff;
   color: #000;
   width: 100%;
-  display: flex;
+  position: relative;
   min-height: 100vh;
   flex-direction: column;
 }
@@ -36,7 +36,6 @@ main {
 /* ------------------HOME PAGE------------------ */
 
 /* navigation section */
-
 #nav-tab {
   background-color: #717e99ff;
 }
@@ -61,8 +60,44 @@ main {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* footer  */
-.page-footer {
+
+/* Footer */
+footer {
+  height: 5rem;
   background-color: #717e99ff;
-  padding-top: 0px;
+  margin-top: 45px;
+  z-index: 1020;
 }
+
+.inline-block {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.social-networks-links ul {
+ list-style: none;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+
+}
+
+.social-networks-links li a {
+ color: #ffffff;
+ margin: .2rem;
+ padding: .2rem;
+ font-size: 1.2rem;
+}
+
+.social-networks-links li a:hover {
+ color: #000;
+}
+
+.copyright p {
+  color: #ffffff;
+ }
+
+ .copyright p:hover {
+  color: #000;
+ }
+ 

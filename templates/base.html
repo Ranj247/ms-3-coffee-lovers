@@ -15,7 +15,6 @@
   <!-- Materialize css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     type="text/css">
-
   <!-- stylesheet link -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   {% block styles %}
@@ -24,7 +23,6 @@
 </head>
 
 <body>
-
   <header>
     <!-- top navbar -->
     <nav class="nav-extended text-shadow" id="nav-tab">
@@ -61,29 +59,29 @@
   {% block content %}
   {% endblock %}
 
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Coffee Lovers</h5>
-          <p class="grey-text text-lighten-4">This site has been created for educational purposes only.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Contact Us</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com">LinkedIn</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://twitter.com/?lang=en">Twitter</a></li>
-          </ul>
-        </div>
+  <!-- Footer -->
+  <!-- Credit: Inspiration / code  taken from mini project 'Resume Project' and customized.-->
+  <footer>
+    <div class="row">
+      <div class="col l6 s12  copyright">
+        <p class="inline-block text-shadow">
+          &#169; 2021 Coffee Lovers
+        </p>
+      </div>
+      <div class="col l4 offset-l2 s12 social-networks-links">
+        <ul class="inline-block text-shadow">
+          <li>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a>
+          </li>
+        </ul>
       </div>
     </div>
-
-    <div class="footer-copyright">
-      <div class="container">
-        © 2021 Coffee Lovers
-      </div>
-    </div>
-
   </footer>
 
 

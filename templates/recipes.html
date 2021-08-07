@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Lovers</title>
+</head>
+<body>
+
+  {% for recipe in recipes %}
+      {{ recipe.recipe_method }}<br>
+      {{ recipe.roast_level }}<br>
+      {{ recipe.grind_of_beans }}<br>
+      {{ recipe.quantity_of_Coffee }}<br>
+      {{ recipe.brew_time }}<br>
+      {{ recipe.recipe_description }}<br>
+  {% endfor %}
+
+</body>
+</html>

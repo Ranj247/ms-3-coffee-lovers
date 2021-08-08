@@ -98,7 +98,11 @@ def logout():
 
 @app.route("/add_recipe")
 def add_recipe():
-    return render_template("add_recipe.html")
+    coffee_brew_methods = mongo.db.coffee_brew_methods.find().sort(
+        "method_name", 1)
+    return render_template(
+        "add_recipe.html", coffee_brew_methods=coffee_brew_methods
+        )
 
 
 if __name__ == "__main__":

@@ -36,6 +36,7 @@ main {
 /* flash messages */
 .flashes h4 {
   line-height: 1.5;
+  color: #ffffff;
 }
 
 /* edit/delete button recipe page */

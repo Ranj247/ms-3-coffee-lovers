@@ -211,6 +211,30 @@ def add_coffee_brew_method():
     return render_template("add_coffee_brew_method.html")
 
 
+@app.route(
+    "/edit_coffee_brew_method/<coffee_brew_method_id>",
+    methods=["GET", "POST"]
+    )
+def edit_coffee_brew_method(coffee_brew_method_id):
+    if request.method == "POST":
+        submit = {
+            "method_name": request.form.get("coffee_brew_method")
+        }
+        mongo.db.coffee_brew_methods.update(
+            {"_id": ObjectId(coffee_brew_method_id)},
+            submit
+            )
+        flash("Brew Method Successfully Updated")
+        return redirect(url_for("get_coffee_brew_methods"))
+
+    coffee_brew_method = mongo.db.coffee_brew_methods.find_one(
+        {"_id": ObjectId(coffee_brew_method_id)}
+        )
+    return render_template(
+        "edit_coffee_brew_method.html", coffee_brew_method=coffee_brew_method
+        )
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

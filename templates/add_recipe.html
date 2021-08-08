@@ -1,79 +1,85 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="brown-text text-lighten-1 center-align">Add Recipe</h3>
+<h3 class="brown-text text-lighten-1 center-align">Add Recipe</h3>
 
-    <div class="row card-panel grey lighten-5">
-        <form class="col s12" method="POST" action="">
-            
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix brown-text text-lighten-1"></i>
-                    <select id="coffee_brew_methods" name="coffee_brew_methods" class="validate" required>
-                        <option value="" disabled selected>Choose a Coffee Brew Method</option>
-                        {% for coffee_brew_method in coffee_brew_methods %}
-                            <option value="{{ coffee_brew_method.method_name }}">{{ coffee_brew_method.method_name }}</option>
-                        {% endfor %}
-                    </select>
-                    <label for="coffee_brew_methods">Coffee Brew Method</label>
-                </div>
-            </div>
-          
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
-                    <input id="recipe_method" name="recipe_method" minlength="5" maxlength="50" type="text" 
-                        class="validate" required>
-                    <label for="recipe_method">Coffee Brew Method</label>
-                </div>
-            </div>
+<div class="row card-panel grey lighten-5">
+  <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
-                    <input id="roast_level" name="roast_level" minlength="5" maxlength="50" type="text" 
-                        class="validate" required>
-                    <label for="roast_level">Coffee Roast Level</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
-                    <input id="grind_of_beans" name="grind_of_beans" minlength="5" maxlength="50" type="text" 
-                        class="validate" required>
-                    <label for="grind_of_beans">Grind Of Beans</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
-                    <input id="quantity_of_Coffee" name="quantity_of_Coffee" minlength="5" maxlength="50" type="text"
-                        class="validate" required>
-                    <label for="quantity_of_Coffee">Quantity Of Coffee</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
-                    <input id="brew_time" name="brew_time" minlength="5" maxlength="50" type="text"
-                        class="validate" required>
-                    <label for="brew_time">Brew Time</label>
-                </div>
-            </div>            
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix brown-text text-lighten-1"></i>
-                    <textarea id="recipe_description" name="recipe_description" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
-                    <label for="recipe_description">Recipe Description</label>
-                </div>
-            </div>
-
-        </form>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-folder-open prefix brown-text text-lighten-1"></i>
+        <select id="coffee_brew_methods" name="coffee_brew_methods" class="validate" required>
+          <option value="" disabled selected>Choose a Coffee Brew Method</option>
+          {% for coffee_brew_method in coffee_brew_methods %}
+          <option value="{{ coffee_brew_method.method_name }}">{{ coffee_brew_method.method_name }}</option>
+          {% endfor %}
+        </select>
+        <label for="coffee_brew_methods">Coffee Brew Method</label>
+      </div>
     </div>
+    <!-- coffee brew methods -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
+        <input id="recipe_method" name="recipe_method" minlength="5" maxlength="50" type="text" class="validate"
+          required>
+        <label for="recipe_method">Coffee Brew Method</label>
+      </div>
+    </div>
+    <!-- coffee roast level -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
+        <input id="roast_level" name="roast_level" minlength="5" maxlength="50" type="text" class="validate" required>
+        <label for="roast_level">Coffee Roast Level</label>
+      </div>
+    </div>
+    <!-- grind of beans -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
+        <input id="grind_of_beans" name="grind_of_beans" minlength="5" maxlength="50" type="text" class="validate"
+          required>
+        <label for="grind_of_beans">Grind Of Beans</label>
+      </div>
+    </div>
+    <!-- quantity of Coffee -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
+        <input id="quantity_of_Coffee" name="quantity_of_Coffee" minlength="5" maxlength="50" type="text"
+          class="validate" required>
+        <label for="quantity_of_Coffee">Quantity Of Coffee</label>
+      </div>
+    </div>
+    <!-- brew time -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-pencil-alt prefix brown-text text-lighten-1"></i>
+        <input id="brew_time" name="brew_time" minlength="5" maxlength="50" type="text" class="validate" required>
+        <label for="brew_time">Brew Time</label>
+      </div>
+    </div>
+    <!-- recipe description -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-align-left prefix brown-text text-lighten-1"></i>
+        <textarea id="recipe_description" name="recipe_description" minlength="5" maxlength="200"
+          class="materialize-textarea validate" required></textarea>
+        <label for="recipe_description">Recipe Description</label>
+      </div>
+    </div>
+    <!-- submit button -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <button type="submit" class="btn-large brown lighten-1 text-shadow">
+          Submit <i class="fas fa-plus-square right"></i>
+        </button>
+      </div>
+    </div>
+
+  </form>
+</div>
 
 {% endblock %}

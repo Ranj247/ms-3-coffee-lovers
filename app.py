@@ -235,6 +235,16 @@ def edit_coffee_brew_method(coffee_brew_method_id):
         )
 
 
+@app.route(
+    "/delete_coffee_brew_method/<coffee_brew_method_id>",
+    methods=["GET", "POST"]
+    )
+def delete_coffee_brew_method(coffee_brew_method_id):
+    mongo.db.coffee_brew_methods.remove({"_id": ObjectId(coffee_brew_method_id)})
+    flash("Brew Method Successfully Deleted")
+    return redirect(url_for("get_coffee_brew_methods"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

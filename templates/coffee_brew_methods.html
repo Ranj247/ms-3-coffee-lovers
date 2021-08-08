@@ -4,6 +4,14 @@
     <h3 class="brown-text text-lighten-1 center-align">Manage Brew Methods</h3>
 
     <div class="row">
+      <div class="col s12 center-align">
+          <a href="{{ url_for('add_coffee_brew_method') }}" class="btn-large brown lighten-1 text-shadow">
+              Add Brew Method <i class="fas fa-plus-square right"></i>
+          </a>
+      </div>
+    </div>
+
+    <div class="row">
   
         {% for coffee_brew_method in coffee_brew_methods %}
             <div class="col s12 m3">

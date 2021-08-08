@@ -139,12 +139,44 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    if request.method == "POST":
+        update_recipe = {
+            "recipe_method": request.form.get("coffee_brew_method"),
+            "roast_level": request.form.get("roast_level"),
+            "grind_of_bean": request.form.get("grind_of_bean"),
+            "quantity_of_coffee": request.form.get("quantity_of_coffee"),
+            "brew_time": request.form.get("brew_time"),
+            "recipe_description": request.form.get("recipe_description"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, update_recipe)
+        flash("Task Successfully Updated")
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     coffee_brew_methods = mongo.db.coffee_brew_methods.find().sort(
-        "method_name", 1)
+        "method_name", 1
+        )
+    roast_levels = [
+        "Light", "Light-Medium", "Medium", "Medium-Dark", "Dark", "French"
+        ]
+    grind_of_beans = [
+        "Fine", "Fine-Medium", "Medium", "Medium-Coarse", "Coarse"
+        ]
+    quantity_of_coffees = [
+        "1 tablespoons of coffee (7g)", "2 tablespoons of coffee (14g)",
+        "3 tablespoons of coffee (21g)", "4 tablespoons of coffee (28g)",
+        "5 tablespoons of coffee (35g)", "6 tablespoons of coffee (42g)"
+        ]
+    brew_times = [
+        "1 minute", "2 minutes", "3 minutes", "4 minutes",
+        "5 minutes", "6 minutes", "7 minutes", "8 minutes",
+        "9 minutes", "10 minutes"
+        ]
     return render_template(
         "edit_recipe.html", recipe=recipe,
-        coffee_brew_methods=coffee_brew_methods
+        coffee_brew_methods=coffee_brew_methods, roast_levels=roast_levels,
+        grind_of_beans=grind_of_beans,
+        quantity_of_coffees=quantity_of_coffees, brew_times=brew_times
         )
 
 

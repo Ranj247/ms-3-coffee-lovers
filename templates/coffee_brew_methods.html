@@ -16,7 +16,7 @@
                           Edit
                         </a>
                         <a href="{{ url_for('delete_coffee_brew_method', coffee_brew_method_id=coffee_brew_method._id) }}" 
-                        class="btn red lighten-1">
+                        onclick="return confirm('Are you sure you want to permanently delete this Brew Method?')" class="btn red lighten-1">
                           Delete
                         </a>
                     </div>

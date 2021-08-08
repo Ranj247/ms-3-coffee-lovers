@@ -1,13 +1,3 @@
-/* CSS HEX */
-/* 
-cafe-noir: #553a27ff;
-manatee: #95a2bdff;
-Navbar color: #717e99ff;
-light-periwinkle: #ccd6ebff;
-sapphire: #2354b8ff; 
-*/
-
-
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
 
@@ -76,7 +66,6 @@ main {
 .text-shadow {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-
 
 /* Footer */
 footer {

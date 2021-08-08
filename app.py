@@ -109,7 +109,7 @@ def add_recipe():
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("Task Successfully Added")
+        flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
 
     coffee_brew_methods = mongo.db.coffee_brew_methods.find().sort(
@@ -150,7 +150,7 @@ def edit_recipe(recipe_id):
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, update_recipe)
-        flash("Task Successfully Updated")
+        flash("Recipe Successfully Updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     coffee_brew_methods = mongo.db.coffee_brew_methods.find().sort(
@@ -183,7 +183,7 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Task Successfully Deleted")
+    flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
 
 

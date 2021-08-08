@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Coffee Lovers" content="A website for Coffee Lovers to view and share their coffee brewing recipes." />
+  <meta name="description" content="A website for Coffee Lovers to view and share their coffee brewing recipes." />
   <!-- favicon image link -->
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}" />
   <!-- Fontawesome -->
@@ -17,8 +17,6 @@
     type="text/css">
   <!-- stylesheet link -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-  {% block styles %}
-  {% endblock %}
   <title>Coffee Lovers</title>
 </head>
 
@@ -64,26 +62,15 @@
       <li><a href="{{ url_for('register') }}">Register</a></li>
       {% endif %}
     </ul>
-  </header>
 
-  <!-- flash messages -->
-  <!-- <section>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-                <div class="container flashes text-shadow">
-                    <h4 class="brown lighten-1 center-align">{{ message }}</h4>
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-  </section> -->
+  </header>
 
   <main class="container">
   {% block content %}
   {% endblock %}
   </main>
 
+  <!-- flash messages -->
   <section>
     <div class="container">
     {% with messages = get_flashed_messages() %}
@@ -132,8 +119,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <!-- script.js link -->
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-  {% block scripts %}
-  {% endblock %}
+
 </body>
 
 </html>

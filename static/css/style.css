@@ -44,8 +44,9 @@ main {
 }
 
 .collapsible-header .col strong {
-  margin: 2.5px;
-  line-height: 40px;
+  margin: 3px;
+  padding-left: 10px;
+  line-height: 41px;
 }
 
 /* ------------------HOME PAGE------------------ */

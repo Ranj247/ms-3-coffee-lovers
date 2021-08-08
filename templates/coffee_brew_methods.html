@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="brown-text text-lighten-1 center-align">Manage Brew Methods</h3>
+
+    <div class="row">
+  
+        {% for coffee_brew_method in coffee_brew_methods %}
+            <div class="col s12 m3">
+                <div class="card brown lighten-1 text-shadow center-align">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{ coffee_brew_method.method_name }}</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn green lighten-1 accent-4">Edit</a>
+                        <a href="#" class="btn red lighten-1">Delete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

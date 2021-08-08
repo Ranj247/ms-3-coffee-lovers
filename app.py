@@ -187,6 +187,17 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+@app.route("/get_coffee_brew_methods")
+def get_coffee_brew_methods():
+    coffee_brew_methods = list(
+        mongo.db.coffee_brew_methods.find().sort("method_name", 1)
+        )
+    return render_template(
+        "coffee_brew_methods.html",
+        coffee_brew_methods=coffee_brew_methods
+        )
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

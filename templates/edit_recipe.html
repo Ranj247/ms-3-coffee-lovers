@@ -11,9 +11,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-mug-hot prefix brown-text text-lighten-1"></i>
                     <select id="coffee_brew_method" name="coffee_brew_method" class="validate" required>
-                        <option value="" disabled selected>Choose a Coffee Brew Method</option>
+                        <option value="" disabled>Choose a Coffee Brew Method</option>
                         {% for coffee_brew_method in coffee_brew_methods %}
-                            <option value="{{ coffee_brew_method.method_name }}">{{ coffee_brew_method.method_name }}</option>
+                            {% if coffee_brew_method.method_name == recipe.recipe_method %}
+                                <option value="{{ coffee_brew_method.method_name }}" selected>{{ coffee_brew_method.method_name }}</option>
+                            {% else %}
+                                <option value="{{ coffee_brew_method.method_name }}">{{ coffee_brew_method.method_name }}</option>
+                            {% endif  %}
                         {% endfor %}
                     </select>
                     <label for="coffee_brew_method">Coffee Brew Method</label>
@@ -25,9 +29,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-check-double prefix brown-text text-lighten-1"></i>
                     <select id="roast_level" name="roast_level" class="validate" required>
-                        <option value="" disabled selected>Choose a Coffee Roast Level</option>
+                        <option value="" disabled>Choose a Coffee Roast Level</option>
                         {% for roast in roast_levels %}
-                            <option value="{{ roast }}">{{ roast }}</option>
+                            {% if roast == recipe.roast_level %}
+                                <option value="{{ roast }}" selected>{{ roast }}</option>
+                            {% else %}
+                                <option value="{{ roast }}">{{ roast }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="roast_level">Coffee Roast Level</label>
@@ -39,9 +47,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-mortar-pestle prefix brown-text text-lighten-1"></i>
                     <select id="grind_of_bean" name="grind_of_bean" class="validate" required>
-                        <option value="" disabled selected>Choose a Grind Of Bean</option>
+                        <option value="" disabled>Choose a Grind Of Bean</option>
                         {% for bean in grind_of_beans %}
-                            <option value="{{ bean }}">{{ bean }}</option>
+                            {% if bean == recipe.grind_of_bean %}
+                                <option value="{{ bean }}" selected>{{ bean }}</option>
+                            {% else %}
+                                <option value="{{ bean }}">{{ bean }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="grind_of_bean">Grind Of Bean</label>
@@ -53,9 +65,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-weight prefix brown-text text-lighten-1"></i>
                     <select id="quantity_of_coffee" name="quantity_of_coffee" class="validate" required>
-                        <option value="" disabled selected>Choose Quantity Of Coffee</option>
+                        <option value="" disabled>Choose Quantity Of Coffee</option>
                         {% for coffee in quantity_of_coffees %}
-                            <option value="{{ coffee }}">{{ coffee }}</option>
+                            {% if coffee == recipe.quantity_of_coffee %}
+                                <option value="{{ coffee }}" selected>{{ coffee }}</option>
+                            {% else %}
+                                <option value="{{ coffee }}">{{ coffee }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="quantity_of_coffee">Quantity Of Coffee</label>
@@ -67,9 +83,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-stopwatch prefix brown-text text-lighten-1"></i>
                     <select id="brew_time" name="brew_time" class="validate" required>
-                        <option value="" disabled selected>Choose Brew Time</option>
+                        <option value="" disabled>Choose Brew Time</option>
                         {% for time in brew_times %}
-                            <option value="{{ time }}">{{ time }}</option>
+                            {% if time == recipe.brew_time %}
+                                <option value="{{ time }}" selected>{{ time }}</option>
+                            {% else %}
+                                <option value="{{ time }}">{{ time }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="brew_time">Brew Time</label>
@@ -80,8 +100,9 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix brown-text text-lighten-1"></i>
-                    <textarea id="recipe_description" name="recipe_description" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <textarea id="recipe_description" name="recipe_description" minlength="5" maxlength="200" class="materialize-textarea validate" required>
+                        {{- recipe.recipe_description -}}
+                    </textarea>
                     <label for="recipe_description">Recipe Description</label>
                 </div>
             </div>
@@ -89,9 +110,13 @@
             <!-- submit button -->
             <div class="row">
               <div class="col s12 center-align">
-                  <button type="submit" class="btn-large brown lighten-1 text-shadow">
-                    Edit Recipe <i class="fas fa-edit right"></i>
+                  <!-- cancel button -->
+                  <button type="submit" class="btn-large green lighten-1 text-shadow">
+                      Edit Recipe <i class="fas fa-edit right"></i>
                   </button>
+                  <a href="{{ url_for('get_recipes') }}" class="btn-large red lighten-1 text-shadow">
+                      Cancel <i class="fas fa-times-circle right"></i>
+                  </a>
               </div>
           </div>
 

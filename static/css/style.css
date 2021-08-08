@@ -38,6 +38,16 @@ main {
   line-height: 1.5;
 }
 
+/* edit/delete button recipe page */
+.btn-small {
+  margin: 2.5px;
+}
+
+.collapsible-header .col strong {
+  margin: 2.5px;
+  line-height: 40px;
+}
+
 /* ------------------HOME PAGE------------------ */
 
 /* navigation section */

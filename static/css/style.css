@@ -1,6 +1,14 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
 
+/* root */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 html,
 body {
   height: 100%;
@@ -24,7 +32,6 @@ main {
   flex: 1 0 auto;
 }
 
-
 /* flash messages */
 .flashes h4 {
   line-height: 1.5;
@@ -36,10 +43,14 @@ main {
   margin: 2px;
 }
 
-
 /* ------------------HOME PAGE------------------ */
 
 /* navigation section */
+
+nav.nav-extended {
+  position: fixed;
+}
+
 #nav-tab {
   background-color: #4a6964;
 }
@@ -82,6 +93,21 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+/* Profile page */
+.profile-page.card-panel {
+  margin-top: 5rem;
+}
+
+/* New Recipe page */
+h3.add-recipe-page {
+  margin-top: 5rem;
+}
+
+/* Manage Brew Methods page */
+h3.coffee-brew-methods {
+  margin-top: 5rem;
 }
 
 /* Footer */

@@ -95,18 +95,8 @@ nav.nav-extended {
   background-size: cover;
 }
 
-/* Profile page */
-.profile-page.card-panel {
-  margin-top: 5rem;
-}
-
-/* New Recipe page */
-h3.add-recipe-page {
-  margin-top: 5rem;
-}
-
-/* Manage Brew Methods page */
-h3.coffee-brew-methods {
+/* margin for page headings */
+.page-heading {
   margin-top: 5rem;
 }
 

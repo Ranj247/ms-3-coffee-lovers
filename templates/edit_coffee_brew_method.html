@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class=" brown-text text-lighten-1 center-align">Edit Brew Method</h3>
+    <h3 class="page-heading brown-text text-lighten-1 center-align">Edit Brew Method</h3>
 
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('edit_coffee_brew_method', coffee_brew_method_id=coffee_brew_method._id) }}">

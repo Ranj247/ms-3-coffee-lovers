@@ -96,6 +96,7 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ### Skeleton
 #### Wireframes
 
+
 ### Surface
 
 
@@ -104,6 +105,23 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ## Technologies Used
 
 ### Tools
+- [GitPod](https://www.gitpod.io/)
+    - Used as the preferred IDE for development.
+- [Git](https://git-scm.com/)
+    - Used via the Gitpod terminal for version control, with regular commits, and to push to GitHub & Heroku.
+- [GitHub](https://github.com/)
+    - Used to store the site's code repository.
+- [Heroku](https://www.heroku.com/)
+    - Used to host the deployed site.
+- [Lucidchart](https://www.lucidchart.com)
+    - To create the site's structural flowchart.
+- [Balsamiq](https://balsamiq.com/)
+    - To create the site's wireframes.
+- [Google Fonts](https://fonts.google.com/)
+    - Used to import the site's fonts.
+- [Compress JPEG](https://compressjpeg.com/)
+    - Used to compress the site's hero image.
+
 
 ### Front-End Technologies
 

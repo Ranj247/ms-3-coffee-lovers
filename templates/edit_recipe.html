@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="page-heading brown-text text-lighten-1 center-align">Edit Recipe</h3>
+    <h3 class="black-text center-align">Edit Recipe</h3>
 
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
@@ -9,7 +9,7 @@
             <!-- coffee brew methods -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-mug-hot prefix brown-text text-lighten-1"></i>
+                    <i class="fas fa-mug-hot prefix"></i>
                     <select id="coffee_brew_method" name="coffee_brew_method" class="validate" required>
                         <option value="" disabled>Choose a Coffee Brew Method</option>
                         {% for coffee_brew_method in coffee_brew_methods %}
@@ -27,7 +27,7 @@
             <!-- coffee roast level -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-check-double prefix brown-text text-lighten-1"></i>
+                    <i class="fas fa-check-double prefix"></i>
                     <select id="roast_level" name="roast_level" class="validate" required>
                         <option value="" disabled>Choose a Coffee Roast Level</option>
                         {% for roast in roast_levels %}
@@ -45,7 +45,7 @@
             <!-- grind of bean -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-mortar-pestle prefix brown-text text-lighten-1"></i>
+                    <i class="fas fa-mortar-pestle prefix"></i>
                     <select id="grind_of_bean" name="grind_of_bean" class="validate" required>
                         <option value="" disabled>Choose a Grind Of Bean</option>
                         {% for bean in grind_of_beans %}
@@ -63,7 +63,7 @@
             <!-- quantity of coffee -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-weight prefix brown-text text-lighten-1"></i>
+                    <i class="fas fa-weight prefix"></i>
                     <select id="quantity_of_coffee" name="quantity_of_coffee" class="validate" required>
                         <option value="" disabled>Choose Quantity Of Coffee</option>
                         {% for coffee in quantity_of_coffees %}
@@ -81,7 +81,7 @@
             <!-- brew time -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-stopwatch prefix brown-text text-lighten-1"></i>
+                    <i class="fas fa-stopwatch prefix"></i>
                     <select id="brew_time" name="brew_time" class="validate" required>
                         <option value="" disabled>Choose Brew Time</option>
                         {% for time in brew_times %}
@@ -99,7 +99,7 @@
             <!-- recipe description -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix brown-text text-lighten-1"></i>
+                    <i class="fas fa-align-left prefix"></i>
                     <textarea id="recipe_description" name="recipe_description" minlength="5" maxlength="200" class="materialize-textarea validate" required>
                         {{- recipe.recipe_description -}}
                     </textarea>

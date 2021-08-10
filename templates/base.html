@@ -69,62 +69,61 @@
 
   </header>
 
-  <main class="container">
-  {% block content %}
-  {% endblock %}
-  </main>
-
   <!-- flash messages -->
-  <section>
-    <div class="container">
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-                <div class="container flashes text-shadow">
-                    <h4 class="black center-align">{{ message }}</h4>
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-    </div>
+  <section class="page-heading">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+      <div class="container flashes text-shadow">
+        <h4 class="brown lighten-1 center-align">{{ message }}</h4>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
   </section>
+
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
 
   <!-- Footer -->
   <!-- Credit: Inspiration / code  taken from Materialize CSS and customized.-->
   <footer class="page-footer">
     <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5>Contact Us</h5>
-                <p>Send an email to get in touch with the site admin!</p>
-                <p id="Email-link"><strong>Email:</strong> <a href="mailto:roabb2121@gmail.com" target="_blank">roabb2121@gmail.com</a></p>
-            </div>
-            <div class="col l4 offset-l2 s12 social-networks-links">
-                <h6>Social Media</h6>
-                <ul>
-                    <li>
-                        <a target="_blank" rel="noreferrer" href="https://ie.linkedin.com/">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" rel="noreferrer" href="https://twitter.com/?lang=en">
-                            <i class="fab fa-twitter"></i> Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" rel="noreferrer" href="https://instagram.com">
-                          <i class="fab fa-instagram"></i> Instagram
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="row">
+        <div class="col l6 s12">
+          <h5>Contact Us</h5>
+          <p>Send an email to get in touch with the site admin!</p>
+          <p id="Email-link"><strong>Email:</strong> <a href="mailto:roabb2121@gmail.com"
+              target="_blank">roabb2121@gmail.com</a></p>
         </div>
+        <div class="col l4 offset-l2 s12 social-networks-links">
+          <h6>Social Media</h6>
+          <ul>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://ie.linkedin.com/">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://twitter.com/?lang=en">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://instagram.com">
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="footer-copyright">
-        <div class="container">
-            &copy; 2021 Coffee Lovers
-        </div>
+      <div class="container">
+        &copy; 2021 Coffee Lovers
+      </div>
     </div>
   </footer>
 

@@ -41,8 +41,12 @@ main {
 
 /* navigation section */
 
-nav.nav-extended {
+nav .nav-extended {
   position: fixed;
+}
+
+nav .brand-logo {
+  position: relative;
 }
 
 #nav-tab {

@@ -121,11 +121,30 @@ The User Experience for this site was planned & developed using the [5 Planes of
     - Used to import the site's fonts.
 - [Compress JPEG](https://compressjpeg.com/)
     - Used to compress the site's hero image.
-
+- [Cloudinary](https://cloudinary.com/)
+    - Used to link image files to the README.md file.
 
 ### Front-End Technologies
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JQuery 3.6.0](https://jquery.com/)
+    - Used as the primary JavaScript library.
+- [Materialize 1.0.0](https://materializecss.com/)
+    - Used as a responsive front-end framework.
 
 ### Back-End Technologies
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+    - Used with Python as the primary web microframework.
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+    - Used for creating templates with Flask.
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+    - Used for password hashing & authentication on the site.
+- [MongoDB Atlas](https://www.mongodb.com/)
+    - Used to store the site's database.
+- [PyMongo](https://pypi.org/project/pymongo/)
+    - Used to interact with the MongoDB database from Python.
 
 ***
 

@@ -138,4 +138,8 @@ nav.brand-logo {
     text-transform: none;
     margin: 2px;
   }
+
+  button.col.s4.offset-s4.btn-small.black.text-shadow {
+    width: fit-content;
+  }
 }

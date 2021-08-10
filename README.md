@@ -65,6 +65,20 @@ The User Experience for this site was planned & developed using the [5 Planes of
 
 ### Scope
 #### Existing Features
+- **Profile:**
+    - The Profile provides functionality for registered & logged in users to see their own recipes (if any recipe created), add more recipes, edit or delete their existing recipes.
+- **Add Recipe:**
+    - The Add Recipe provides functionality for registered users to add their own recipes via a form.
+- **Edit Recipe:**
+    - The Edit Recipe provides functionality for registered users to edit recipes that they've added. Extra checks are in place here to ensure the current user matches the username of the user who created the recipe.
+- **Delete Recipe:**
+    - The Delete Recipe provides functionality for registered users to delete recipes that they've added. Extra authentication steps are also in place in this feature to ensure that the current username matches that of the recipe's creator.
+- **Manage Brew Methods (ADMIN):**
+    - The Manage Brew Methods functionality provides the Admin of the site to view all of the coffee brew methods.
+- **Add Brew Method (ADMIN):**
+    - The Add Brew Method functionality provides a form where the site admin can add new coffee brew method.
+- **Delete Brew Method (ADMIN):**
+    - The Delete Brew Method functionality provides functionality for the site admin to remove brew methods from the site.
 
 #### Future Planned Features
 

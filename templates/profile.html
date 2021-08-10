@@ -3,15 +3,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="profile-page card-panel">
-                <h3 class="center-align brown-text text-lighten-1">
-                    {{ username }}'s Profile
-                </h3>
-            </div>
-        </div>
-    </div>
+    <h3 class="center-align">Your Recipes</h3>
     
     <div class="row">
         {% if recipes %}
@@ -43,7 +35,7 @@
                         <strong>Quantity Of Coffee:</strong> {{ recipe.quantity_of_coffee }}<br>
                         <strong>Brew Time: </strong> {{ recipe.brew_time }}<br><br>
                         <p>{{ recipe.recipe_description }}</p><br>
-                        <p><em>by: {{ recipe.created_by }}</em></p>
+                        <p><em><strong>Added By:</strong> {{ recipe.created_by }}</em></p>
                     </div>
                 </div>
             </div>

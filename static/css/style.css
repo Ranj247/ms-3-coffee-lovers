@@ -37,15 +37,19 @@ main {
   margin: 2px;
 }
 
+.btn, .btn-large, .btn-small, .btn-flat {
+  text-transform: none;
+}
+
 /* ------------------HOME PAGE------------------ */
 
 /* navigation section */
 
-nav .nav-extended {
+nav.nav-extended {
   position: fixed;
 }
 
-nav .brand-logo {
+nav.brand-logo {
   position: relative;
 }
 
@@ -121,4 +125,17 @@ nav .brand-logo {
 
 #Email-link a:hover {
   color: #000;
+}
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 40%;
+    -webkit-transform: translateX(-40%);
+    transform: translateX(-40%);
+  }
+
+  .btn, .btn-large, .btn-small, .btn-flat {
+    text-transform: none;
+    margin: 2px;
+  }
 }

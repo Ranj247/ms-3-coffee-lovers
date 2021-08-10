@@ -150,6 +150,16 @@ The User Experience for this site was planned & developed using the [5 Planes of
 
 ## Resources
 
+- [Code Institute Course Content](https://courses.codeinstitute.net/login) -Main source of fundamental knowledge.
+- [Stack Overflow](https://stackoverflow.com/) -General resource.
+- [Google chrome developer tools](https://developer.chrome.com/docs/devtools/) - used to check page elements, help debug issues with the site layout and test different CSS styles and console JS.
+- [w3schools](https://www.w3schools.com/default.asp)-General resource.
+- [Balsamic](https://balsamiq.com/wireframes/) - Wireframing design tool to create wireframes.
+- [Am I Responsive](http://ami.responsivedesign.is/) - Responsive website mockup image generator.
+- [Imagecolorpicker](https://imagecolorpicker.com/en) - color schemes generator.
+- [a11y](https://color.a11y.com/Contrast/) - Website color contrast checker
+- [Lighthouse Report Viewer](https://googlechrome.github.io/lighthouse/viewer/) - used as part of testing website on grounds of Performance, Accessibility, Best Practices and SEO.
+
 
 ***
 
@@ -158,28 +168,111 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ***
 
 ## Code validity
+- HTML - [Markup Validation W3C Service](https://validator.w3.org/)
+- CSS - [Jigsaw  Validation W3C Service](https://jigsaw.w3.org/css-validator/)
 
 ***
 
 ## Version Control
+- Used Git for version control.
 
 ***
 
 ## Deployment
 ### Local Deployment
 
+The following dependencies will need to be installed in order to run this application locally:
+- [Python3](https://www.python.org/downloads) to run the application.
+- [PIP](https://pip.pypa.io/en/stable/installing) to install app requirements.
+- [GitPod](https://www.gitpod.io/) or any preferred IDE, such as [VSCode](https://code.visualstudio.com/).
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for cloning and version control.
+- [MongoDB](https://www.mongodb.com/) to create a database using MongoDB Atlas.
+
+Follow the below steps for local deployment:
+
+1. Clone the GitHub repository by entering the following command into the Git terminal:
+    - `git clone https://github.com/Ranj247/ms-3-coffee-lovers.git`
+2. After cloning the project, create an `env.py` file that includes the below code, replacing the `SECRET_KEY`, `MONGO_URI`, `MONGO_DBNAME` with your own credentials:
+```
+import os
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
+os.environ.setdefault("MONGO_URI", "YOUR_MONGO_URI")
+os.environ.setdefault("MONGO_DBNAME", "coffee_lovers")
+```
+3. Create a `.gitignore` file, and add the `env.py` file to the list of files.
+4. Install all requirements from the [requirements.txt](https://github.com/Ranj247/ms-3-coffee-lovers/blob/main/requirements.txt) file using this command:
+    - `pip3 -r requirements.txt`
+5. Sign up for a [MongoDB](https://www.mongodb.com) account, and create a new Database called `coffee_lovers`. The collections in that database should be structured as follows:
+
+**coffee_brew_methods**
+```
+_id: <ObjectId>
+method_name: <string>
+```
+
+**recipes**
+```
+_id: <ObjectId>
+recipe_method: <string>
+roast_level: <string>
+grind_of_bean: <string>
+quantity_of_coffee: <string>
+brew_time: <string>
+recipe_description: <string>
+created_by: <string>
+```
+
+**users**
+```
+_id: <ObjectId>
+username: <string>
+password: <string>
+```
+
+6. Run the app using the following command in the terminal:
+    - `python3 app.py`
+
 ### Remote Deployment
 
+To deploy this app on Heroku, the following steps were taken:
+
+1. Create a `requirements.txt` file so Heroku can install the required dependencies.
+    - `pip3 freeze --local > requirements.txt`
+    - This project's requirements.txt file can be seen [here](https://github.com/Ranj247/ms-3-coffee-lovers/blob/main/requirements.txt).
+2. Create a `Procfile` with information about the type of app that will be deployed.
+    - `echo web: python app.py > Procfile`
+    - This project's Procfile file can be seen [here](https://github.com/Ranj247/ms-3-coffee-lovers/blob/main/Procfile).
+    - Make sure to delete the blank line at the end of the Profile, as this can cause issues when deploying to Heroku later.
+3. Create a Heroku account, create a project app, and click the "Deploy" tab. 
+4. "Connect GitHub" as the Deployment Method, and select "Enable Automatic Deployment".
+4. In the "Settings" tab, click the "Reveal Config Vars" button to configure environmental variables as follows:
+    - **IP** : `0.0.0.0`
+    - **PORT** : `5000`
+    - **SECRET_KEY** : `<YOUR_SECRET_KEY>`
+    - **MONGO_URI** : `<YOUR_MONGO_DB_URI>`
+    - **MONGO_DBNAME**: `coffee_lovers`    
+    
+5. The app should now be deployed to Heroku - click the "Open App" button to view the deployed site.
 
 ***
 
 ## Credits
 
 ### Media
+- [favicon.io](https://favicon.io/) was used to generate the site's favicon image.
+- [Pexels](https://www.pexels.com/) used to source Hero image and customised to be used for the website.
 
 ### Content
+- [6 Popular Methods for Brewing Coffee at Home](https://treescoffee.com/blog/2016/04/6-popular-methods-for-brewing-coffee-at-home/) - inspiration for website content.
 
 ### Code Snippets
+- Hero Image functionality adapted from [W3Schools Example](https://www.w3schools.com/howto/howto_css_hero_image.asp).
+- Fixed Navbar functionality adapted from [W3Schools Example](https://www.w3schools.com/howto/howto_css_fixed_menu.asp).
+- Sticky Footer functionality adapted from [Materialize CSS Example](https://materializecss.com/footer.html).
+- Code Institute coursework mini project: 
+- [Stack overflow](https://stackoverflow.com)
 
 ***
 

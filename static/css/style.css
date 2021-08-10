@@ -59,6 +59,7 @@ nav.brand-logo {
 
 #nav-tab #logo {
   color: #ffffff;
+  width: fit-content;
 }
 
 #nav-tab #logo:hover {
@@ -128,12 +129,6 @@ nav.brand-logo {
 }
 
 @media only screen and (max-width: 992px) {
-  nav .brand-logo {
-    left: 40%;
-    -webkit-transform: translateX(-40%);
-    transform: translateX(-40%);
-  }
-
   .btn, .btn-large, .btn-small, .btn-flat {
     text-transform: none;
     margin: 2px;

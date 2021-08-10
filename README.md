@@ -44,6 +44,25 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ### Strategy
 #### User Stories
 
+- As a first-time visitor to the website, I want to:
+    - explore all the coffee recipes on the website added by different users.
+    - use the search functionality to narrow down favourite recipes using the keywords.
+    - contribute to the website by adding own favourite coffee recipes. 
+    - experience easier registration process.
+
+- As a returning visitor to the website, I want to:
+    - explore all the coffee recipes on the website added by different users.
+    - Search for recipes by keyword.
+    - Login to my account to see recipes I have added.
+    - Edit recipes that I have added.
+    - Delete recipes that I have added.
+    - Contact the site owner/admin to request the addition of new brew methods.
+
+- As the site owner, I want to be able to:
+    - Log in to the website as an admin account.
+    - Create, Edit, and Delete coffee brew method categories.
+    - Create, Edit, and Delete coffee brewing recipes.
+
 ### Scope
 #### Existing Features
 

@@ -1,6 +1,3 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
-
 /* root */
 
 * {
@@ -9,15 +6,12 @@
   border: 0;
 }
 
-html,
-body {
-  height: 100%;
+html {
   scroll-behavior: smooth;
 }
 
 /* General style */
 body {
-  font-family: 'Oswald', Roboto;
   font-size: 1rem;
   background-color: #c3c2b3;
   color: #000;
@@ -98,6 +92,10 @@ nav.nav-extended {
 /* margin for page headings */
 .page-heading {
   margin-top: 5rem;
+}
+
+#coffee-brew-methods-text {
+  font-weight: 400;
 }
 
 /* Footer */

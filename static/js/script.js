@@ -7,6 +7,8 @@ $(document).ready(function () {
   $("select").formSelect();
 
   validateMaterializeSelect();
+    // Credit: 
+    // Inspiration of the below code came from mini project "flask-task-manager".
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
         let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };

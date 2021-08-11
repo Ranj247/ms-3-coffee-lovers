@@ -21,8 +21,7 @@ Coffee Lovers is a website where users can view coffee brewing recipes and contr
 ***
 
 ## Demo
-Please click on the image to open link in a new browser window.
-
+Please click on the image to open link in a new browser window.<br><br>
 ![Image](readme-assets/images/Mockups.PNG) 
 
 A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)
@@ -92,12 +91,12 @@ The User Experience for this site was planned & developed using the [5 Planes of
 
 ### Structure
 #### Flowchart
-- Flowchart created using [Lucidchart](https://www.lucidchart.com):<br>
-    ![Image](readme-assets/images/Flowcharts.png)<br>
+- Flowchart created using [Lucidchart](https://www.lucidchart.com):<br><br>
+    ![Image](readme-assets/images/Flowcharts.png)<br><br>
 
 ### Skeleton
 #### Wireframe mock ups
-- Wireframes created using [Balsamiq](https://balsamiq.com/):<br>
+- Wireframes created using [Balsamiq](https://balsamiq.com/):<br><br>
     ![Image](readme-assets/images/0001.png)<br>
     ![Image](readme-assets/images/0002.png)<br>
     ![Image](readme-assets/images/0003.png)<br>
@@ -178,7 +177,18 @@ The User Experience for this site was planned & developed using the [5 Planes of
 - Test carried on the website pages such as  **Home, login, Register, Profile, New Recipe, Manage Brew Methods** pages to ensure each points to respective page. 
 - Test carried on the links and action buttons such as **Search, Reset, Add, Edit, Delete, Save, Clear** to ensure specific action takes place.
 - Test carried on the **Social Media icons** in the Footer to ensure the specific link opens the correct pages, and in the new tab.
+- Checked grammar and spelling throughout document.
+- Ran README text through [Online-Spellcheck](https://www.online-spellcheck.com/) to double-check on grammar and spelling.
 - Ran CSS through [Autoprefixer](https://autoprefixer.github.io/) and copied the resulted CSS codes back into style.css file.
+- Tested [HTML Validation](https://validator.w3.org/) No errors or warnings to show. This validator does not recognise Jinja templates & scripting, so returns errors for the lines of code where Jinja is used - this is to be expected. No errors are present in the HTML code otherwise.
+- Tested [CSS Validation](https://jigsaw.w3.org/css-validator/) No errors found.<br>
+    ![Image](readme-assets/images/CSS-validation-report.PNG)<br><br>
+- Test carried on the Responsiveness of all pages using [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).
+    ![Image](readme-assets/images/Mobile-friendliness-test.PNG)<br><br>
+- Test carried on grounds of Performance, Accessibility, Best Practices and SEO using [Lighthouse Report Viewer](https://googlechrome.github.io/lighthouse/viewer/).
+    ![Image](readme-assets/images/lighthouse-report.PNG)<br><br>
+- Test carried on the overall site colours on [a11y](https://color.a11y.com/), a Color Contrast Accessibility Validator.
+    ![Image](readme-assets/images/website-color-contrast-report.PNG)<br><br>
 
 ***
 
@@ -278,23 +288,23 @@ To deploy this app on Heroku, the following steps were taken:
 ### Media
 - [favicon.io](https://favicon.io/) was used to generate the site's favicon image.
 - [Pexels](https://www.pexels.com/) used to source Hero image and customised to be used for the website.
+- [Am I Responsive](http://ami.responsivedesign.is/) - was used to create the mockup image used in the README file.
 
 ### Content
 - [6 Popular Methods for Brewing Coffee at Home](https://treescoffee.com/blog/2016/04/6-popular-methods-for-brewing-coffee-at-home/) - inspiration for website content.
 
 ### Code Snippets
-- Hero Image functionality adapted from [W3Schools Example](https://www.w3schools.com/howto/howto_css_hero_image.asp).
-- Fixed Navbar functionality adapted from [W3Schools Example](https://www.w3schools.com/howto/howto_css_fixed_menu.asp).
-- Sticky Footer functionality adapted from [Materialize CSS Example](https://materializecss.com/footer.html).
-- Code Institute coursework mini project: 
-- [Stack overflow](https://stackoverflow.com)
+- Hero Image functionality adapted from [W3Schools](https://www.w3schools.com/howto/howto_css_hero_image.asp).
+- Fixed Navbar functionality adapted from [W3Schools](https://www.w3schools.com/howto/howto_css_fixed_menu.asp).
+- Navbar [Materialize CSS](https://materializecss.com/navbar.html).
+- Sticky Footer functionality adapted from [Materialize CSS](https://materializecss.com/footer.html).
+- Cards for recipe cards [Materialize CSS](https://materializecss.com/cards.html).
+- Inspiration for the Coffee Lovers project came from the Code Institute coursework mini project, and several of the functionalities such as Searching Recipes, Authentications: Register, Login etc. adapted from mini project: (https://github.com/Code-Institute-Solutions/TaskManagerAuth).
 
 ***
 
 ## Acknowledgements
 I would like to thank:
 - My mentor, **Caleb Mbakwe**, for his guidance, valuable feedbacks, and encouragement through out the project.
-- Tutor support at Code Institute, for funtastic support and help with my technical questions.
-- Slack community for their suggestions and support.
-
+- **Istvan Orosz** for the immense support always.
 ***

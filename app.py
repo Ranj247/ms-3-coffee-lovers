@@ -9,15 +9,19 @@ if os.path.exists("env.py"):
     import env
 
 
+# Create instance of Flask
 app = Flask(__name__)
 
+# Set up configurations for MongoDB
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+# Create an instance of PyMongo
 mongo = PyMongo(app)
 
 
+# All Recipes
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
@@ -25,6 +29,13 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# -------------------------------CREDIT-------------------------------
+# Inspiration for own project came from Code Institute, mini project
+# 'flask task manager', functionalities being used and customised
+# through out the project.
+
+
+# Register a New User
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -49,6 +60,7 @@ def register():
     return render_template("register.html")
 
 
+# Log In Existing User
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -76,6 +88,7 @@ def login():
     return render_template("login.html")
 
 
+# Profile Username
 @app.route("/profile/<username>/", methods=["GET", "POST"])
 def profile(username):
     if session["user"] == username:
@@ -89,6 +102,7 @@ def profile(username):
             recipes=recipes)
 
 
+# Log Out
 @app.route("/logout")
 def logout():
     # Remove user from session cookie
@@ -97,6 +111,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -138,6 +153,7 @@ def add_recipe():
         )
 
 
+# Edit Recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -181,6 +197,7 @@ def edit_recipe(recipe_id):
         )
 
 
+# Delete Recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -188,6 +205,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+# Manage Brew Methods: only admin has access to this page
 @app.route("/get_coffee_brew_methods")
 def get_coffee_brew_methods():
     coffee_brew_methods = list(
@@ -199,6 +217,7 @@ def get_coffee_brew_methods():
         )
 
 
+# Add Brew Method allow admin to add new category to db
 @app.route("/add_coffee_brew_method", methods=["GET", "POST"])
 def add_coffee_brew_method():
     if request.method == "POST":
@@ -212,6 +231,7 @@ def add_coffee_brew_method():
     return render_template("add_coffee_brew_method.html")
 
 
+# Edit Brew Method allows admin to edit category
 @app.route(
     "/edit_coffee_brew_method/<coffee_brew_method_id>",
     methods=["GET", "POST"]
@@ -236,16 +256,20 @@ def edit_coffee_brew_method(coffee_brew_method_id):
         )
 
 
+# Delete Brew Method allows admin to delete category
 @app.route(
     "/delete_coffee_brew_method/<coffee_brew_method_id>",
     methods=["GET", "POST"]
     )
 def delete_coffee_brew_method(coffee_brew_method_id):
-    mongo.db.coffee_brew_methods.remove({"_id": ObjectId(coffee_brew_method_id)})
+    mongo.db.coffee_brew_methods.remove(
+        {"_id": ObjectId(coffee_brew_method_id)}
+        )
     flash("Brew Method Successfully Deleted")
     return redirect(url_for("get_coffee_brew_methods"))
 
 
+# Search Recipes
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -253,6 +277,7 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

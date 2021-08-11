@@ -22,7 +22,8 @@
 
 <body>
   <header>
-    <!-- top navbar -->
+    <!--CREDIT: navbar code customized from materializecss-->
+    <!-- Fixed Navbar Structure -->
     <nav class="nav-extended text-shadow" id="nav-tab">
       <div class="nav-wrapper container">
         <a href="{{ url_for('get_recipes') }}" class="brand-logo" id="logo">Coffee Lovers</a>
@@ -62,6 +63,7 @@
       <li><a href="{{ url_for('register') }}">Register</a></li>
       {% endif %}
     </ul>
+    <!-- End of site navigation-->
 
     <!-- Hero Image -->
     {% block hero %}
@@ -82,6 +84,7 @@
       {% endwith %}
   </section>
 
+  <!-- main content -->
   <main class="container">
     {% block content %}
     {% endblock %}

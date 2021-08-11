@@ -9,13 +9,35 @@ Coffee Lovers is a website where users can view coffee brewing recipes and contr
 -  [Demo](#demo)
 -  [Overview](#overview)
 -  [User Experience (UX)](#user-experience)
+    - [Strategy](#strategy)
+        - [User Stories](#user-stories)
+    - [Scope](#scope)
+        - [Existing Features](#existing-features)
+        - [Features Left to Implement when skills develop](#features-left-to-implement-when-skills-develop)
+    - [Structure](#structure)
+        - [Flowchart](#flowchart)
+    - [Skeleton](#skeleton)
+        - [Wireframe mock ups](#wireframe-mock-ups)
+    - [Surface](#surface)
 -  [Technologies used](#technologies-used)
+    - [Tools](#tools)
+    - [Front-End Technologies](#front-end-technologies)
+    - [Back-End Technologies](#back-end-technologies)
 -  [Resources](#resources)
 -  [Testing](#testing)
+    - [Testing User Stories](#testing-user-stories)
+    - [Compatibility and Responsiveness](#compatibility-and-responsiveness)
+    - [Validation](#validation)
+    - [Manual Testing](#manual-testing)
 -  [Code validity](#code-validity)
 -  [Version Control](#version-control)
 -  [Deployment](#deployment)
+    - [Local Deployment](#local-deployment)
+    - [Remote Deployment](#remote-deployment)
 -  [Credits](#credits)
+    - [Media](#media)
+    - [Content](#content)
+    - [Code Snippets](#code-snippets)
 -  [Acknowledgments](#acknowledgements)
 
 ***
@@ -29,9 +51,9 @@ A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)
 ***
 
 ## Overview
-This is a Coffee Lovers page, which has been designed solely for coffee lovers who would like to find and share their own coffee brewing recipes with other members of the community. This website has been built for my third milestone project which is part of the Code Isntitute's FullStack Software Development Diploma Course, and the main focus is to build a full-stack website allowing users to manage a common dataset. This project demonstrates the skills and knowledge of using the HTML5, CSS3, JavaScript, Python,the Flask framework, Jinja templating language and MongoDB in Back-End development which I have learned recently on the course.
+This is a Coffee Lovers page, which has been designed solely for coffee lovers who would like to find and share their own coffee brewing recipes with other members of the community. This website has been built for my third milestone project which is part of the Code Institute’s FullStack Software Development Diploma Course, and the main focus is to build a full-stack website allowing users to manage a common dataset. This project demonstrates the skills and knowledge of using the HTML5, CSS3, JavaScript, Python, Flask framework, Jinja templating language and MongoDB in Back-End development which I have learned recently on the course.
 
-The aim of the project is to create a coffee brewing recipes website keeping in mind the CRUD functionalities: Create, Read, Update, and Delete recipes from the database. Upon registration, the user will be able to view their profile, create new recipes, update and delete their own recipes at any time. The website is created using the Materialize CSS responsive designing which provide a better user experience from mobile devices to tablets or larger screens.The website was created for educational purposes.
+The aim of the project is to create a coffee brewing recipes website keeping in mind the CRUD functionalities: Create, Read, Update, and Delete recipes from the database. Upon registration, the user will be able to view their profile, create new recipes, update and delete their own recipes at any time. The website is created using the Materialize CSS responsive designing which provide a better user experience from mobile devices to tablets or larger screens. The website was created for educational purposes.
 
 ***
 
@@ -67,11 +89,11 @@ The User Experience for this site was planned & developed using the [5 Planes of
 - **Hero Image:**
     - The hero image of coffee being extracted from the coffee machine hints user that the site content relates to a coffee website.
 - **Search Functionality:**
-    - The search functionality allows all users, registered or unregistered to search for coffee recipes by keywords.
+    - The search functionality allows all users, registered, or unregistered to search for coffee recipes by keywords.
 - **Register:**
     - Users can very simply create an account on the website, the user input is validated, a new "user" document in the site's database is created, and hashing is used for password security. After an account is created, a flash message appears on the screen to showcase that the registration being successful and now the new user would be able to contribute by adding their favourite coffee brewing recipes. 
 - **Login/Logout:**
-    - The Login/Logout functionality adds authentication for registered users, allowing them to access, edit and delete their own recipes. Allows users to logout by clearing the "session" cookie.
+    - The Login/Logout functionality adds authentication for registered users, allowing them to access, edit, and delete their own recipes. Allows users to logout by clearing the "session" cookie.
 - **Profile:**
     - The Profile provides functionality for registered & logged in users to see their own recipes (if any recipe created), add more recipes, edit or delete their existing recipes.
 - **Add Recipe:**
@@ -173,8 +195,12 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ***
 
 ## Testing
+### Testing User Stories
+### Compatibility and Responsiveness
+### Validation
+### Manual Testing
 - Test carried on the **Website Logo** which appears on the left of the menu bar to ensure it points to the Home page.
-- Test carried on the website pages such as  **Home, login, Register, Profile, New Recipe, Manage Brew Methods** pages to ensure each points to respective page. 
+- Test carried on the website pages such as  **Home, login, Register, Profile, New Recipe, Manage Brew Methods** pages to ensure each point to respective page. 
 - Test carried on the links and action buttons such as **Search, Reset, Add, Edit, Delete, Save, Clear** to ensure specific action takes place.
 - Test carried on the **Social Media icons** in the Footer to ensure the specific link opens the correct pages, and in the new tab.
 - Checked grammar and spelling throughout document.
@@ -226,7 +252,7 @@ os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
 os.environ.setdefault("MONGO_URI", "YOUR_MONGO_URI")
 os.environ.setdefault("MONGO_DBNAME", "coffee_lovers")
 ```
-3. Create a `.gitignore` file, and add the `env.py` file to the list of files.
+3. Create a `.gitignore` file and add the `env.py` file to the list of files.
 4. Install all requirements from the [requirements.txt](https://github.com/Ranj247/ms-3-coffee-lovers/blob/main/requirements.txt) file using this command:
     - `pip3 -r requirements.txt`
 5. Sign up for a [MongoDB](https://www.mongodb.com) account, and create a new Database called `coffee_lovers`. The collections in that database should be structured as follows:
@@ -271,7 +297,7 @@ To deploy this app on Heroku, the following steps were taken:
     - This project's Procfile file can be seen [here](https://github.com/Ranj247/ms-3-coffee-lovers/blob/main/Procfile).
     - Make sure to delete the blank line at the end of the Profile, as this can cause issues when deploying to Heroku later.
 3. Create a Heroku account, create a project app, and click the "Deploy" tab. 
-4. "Connect GitHub" as the Deployment Method, and select "Enable Automatic Deployment".
+4. "Connect GitHub" as the Deployment Method and select "Enable Automatic Deployment".
 4. In the "Settings" tab, click the "Reveal Config Vars" button to configure environmental variables as follows:
     - **IP** : `0.0.0.0`
     - **PORT** : `5000`
@@ -288,7 +314,7 @@ To deploy this app on Heroku, the following steps were taken:
 ### Media
 - [favicon.io](https://favicon.io/) was used to generate the site's favicon image.
 - [Pexels](https://www.pexels.com/) used to source Hero image and customised to be used for the website.
-- [Am I Responsive](http://ami.responsivedesign.is/) - was used to create the mockup image used in the README file.
+- [Am I Responsive](http://ami.responsivedesign.is/) - was used to create the mock-up image used in the README file.
 
 ### Content
 - [6 Popular Methods for Brewing Coffee at Home](https://treescoffee.com/blog/2016/04/6-popular-methods-for-brewing-coffee-at-home/) - inspiration for website content.
@@ -305,6 +331,6 @@ To deploy this app on Heroku, the following steps were taken:
 
 ## Acknowledgements
 I would like to thank:
-- My mentor, **Caleb Mbakwe**, for his guidance, valuable feedbacks, and encouragement through out the project.
-- **Istvan Orosz** for the immense support always.
+- My mentor, **Caleb Mbakwe**, for his guidance, valuable feedbacks, and encouragement throughout the project.
+- **Istvan Orosz** for the immense support.
 ***

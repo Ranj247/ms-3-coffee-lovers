@@ -24,6 +24,7 @@ Coffee Lovers is a website where users can view coffee brewing recipes and contr
 Please click on the image to open link in a new browser window.
 
 ![Image](https://res.cloudinary.com/dvsb7k8tp/image/upload/v1628563391/MS3/AmiResponsive-mockup-image_hjacki.png) 
+![Image](readme-assets/images/AmiResponsive-mockup-image.PNG) 
 
 A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)
 
@@ -92,18 +93,20 @@ The User Experience for this site was planned & developed using the [5 Planes of
 
 ### Structure
 #### Flowchart
+- Flowchart created using [Lucidchart](https://www.lucidchart.com):<br>
+    [Flowchart PNG](readme-assets/images/Website-chart - Account ownership diagram.png)
 
 ### Skeleton
 #### Wireframes
 - Wireframes created using [Balsamiq](https://balsamiq.com/):<br>
-    [Home Page](readme-assets/images/0001.jpg)<br>
-    [Log In Page](readme-assets/images/0002.jpg)<br>
-    [Register Page](readme-assets/images/0003.jpg)<br>
-    [Profile Page](readme-assets/images/0004.jpg)<br>
-    [Add Recipe Page](readme-assets/images/0005.jpg)<br>
-    [Edit Recipe Page](readme-assets/images/0006.jpg)<br>
-    [Add Category Page](readme-assets/images/0007.jpg)<br>
-    [Edit Category Page](readme-assets/images/0008.jpg)<br>
+    [Home Page](readme-assets/images/0001.png)<br>
+    [Log In Page](readme-assets/images/0002.png)<br>
+    [Register Page](readme-assets/images/0003.png)<br>
+    [Profile Page](readme-assets/images/0004.png)<br>
+    [Add Recipe Page](readme-assets/images/0005.png)<br>
+    [Edit Recipe Page](readme-assets/images/0006.png)<br>
+    [Add Category Page](readme-assets/images/0007.png)<br>
+    [Edit Category Page](readme-assets/images/0008.png)<br>
 
 ### Surface
 

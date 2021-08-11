@@ -88,7 +88,7 @@ The User Experience for this site was planned & developed using the [5 Planes of
 - **Delete Brew Method:**
     - The Delete Brew Method functionality provides functionality for the site admin to remove brew methods from the site.
 
-#### Future Planned Features
+#### Features Left to Implement when skills develop
 
 ### Structure
 #### Flowchart
@@ -96,7 +96,7 @@ The User Experience for this site was planned & developed using the [5 Planes of
     ![Image](readme-assets/images/Flowcharts.png)<br>
 
 ### Skeleton
-#### Wireframes
+#### Wireframe mock ups
 - Wireframes created using [Balsamiq](https://balsamiq.com/):<br>
     ![Image](readme-assets/images/0001.png)<br>
     ![Image](readme-assets/images/0002.png)<br>
@@ -174,6 +174,11 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ***
 
 ## Testing
+- Test carried on the **Website Logo** which appears on the left of the menu bar to ensure it points to the Home page.
+- Test carried on the website pages such as  **Home, login, Register, Profile, New Recipe, Manage Brew Methods** pages to ensure each points to respective page. 
+- Test carried on the links and action buttons such as **Search, Reset, Add, Edit, Delete, Save, Clear** to ensure specific action takes place.
+- Test carried on the **Social Media icons** in the Footer to ensure the specific link opens the correct pages, and in the new tab.
+- Ran CSS through [Autoprefixer](https://autoprefixer.github.io/) and copied the resulted CSS codes back into style.css file.
 
 ***
 

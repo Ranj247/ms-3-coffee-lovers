@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /* root */
 
 * {
@@ -10,35 +17,28 @@ html {
   scroll-behavior: smooth;
 }
 
-/* General style */
+/* ------------------General style------------------ */
+
 body {
   font-size: 1rem;
   background-color: #c3c2b3;
   color: #000;
   width: 100%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main {
-  flex: 1 0 auto;
-}
-
-/* flash messages */
-.flashes h4 {
-  line-height: 1.5;
-  color: #ffffff;
-}
-
-/* edit/delete button recipe page */
-.btn-small {
-  margin: 2px;
-}
-
-.btn, .btn-large, .btn-small, .btn-flat {
-  text-transform: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 /* ------------------HOME PAGE------------------ */
@@ -60,6 +60,8 @@ nav.brand-logo {
 
 #nav-tab #logo {
   color: #ffffff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -93,10 +95,24 @@ nav.brand-logo {
   margin: 0;
   padding: 0;
   background: url(/static/images/hero-image.jpg) no-repeat center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+}
+
+/* ------------------Main Section------------------ */
+
+/* flash messages */
+.flashes h4 {
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* edit/delete button recipe page */
+.btn-small {
+  margin: 2px;
+}
+
+.btn, .btn-large, .btn-small, .btn-flat {
+  text-transform: none;
 }
 
 /* margin for page headings */
@@ -108,7 +124,8 @@ nav.brand-logo {
   font-weight: 400;
 }
 
-/* Footer */
+/* ------------------Footer------------------ */
+
 .page-footer {
   background-color: #4a6964;
 }
@@ -129,6 +146,8 @@ nav.brand-logo {
   color: #000;
 }
 
+/* ------------------Media queries------------------ */
+
 @media only screen and (max-width: 992px) {
   .btn, .btn-large, .btn-small, .btn-flat {
     text-transform: none;
@@ -136,6 +155,8 @@ nav.brand-logo {
   }
 
   button.col.s4.offset-s4.btn-small.black.text-shadow {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 }

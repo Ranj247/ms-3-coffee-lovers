@@ -95,7 +95,15 @@ The User Experience for this site was planned & developed using the [5 Planes of
 
 ### Skeleton
 #### Wireframes
-
+- Wireframes created using [Balsamiq](https://balsamiq.com/):<br>
+    [Home Page](readme-assets/images/0001.jpg)<br>
+    [Log In Page](readme-assets/images/0002.jpg)<br>
+    [Register Page](readme-assets/images/0003.jpg)<br>
+    [Profile Page](readme-assets/images/0004.jpg)<br>
+    [Add Recipe Page](readme-assets/images/0005.jpg)<br>
+    [Edit Recipe Page](readme-assets/images/0006.jpg)<br>
+    [Add Category Page](readme-assets/images/0007.jpg)<br>
+    [Edit Category Page](readme-assets/images/0008.jpg)<br>
 
 ### Surface
 

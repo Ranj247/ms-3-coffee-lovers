@@ -213,9 +213,26 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ***
 
 ## Testing
+A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)<br>
+
 ### Testing User Stories
+### Testing User Stories from User Experience (UX) Section
+As a first-time visitor, I want to be able to:
+As a returning visitor, I want to be able to:
+As the site owner, I want to be able to:
+
+
+
 
 ### Manual Testing
+#### All Pages
+#### Recipes Page (Home Page)
+#### Login Page
+#### Register Page
+#### Profile Page
+#### Add, Edit, Delete Recipe Pages
+#### Manage Brew Methods Page (ADMIN)
+#### Add, Edit, Delete Brew Method (ADMIN)
 - Test carried on the **Website Logo** which appears on the left of the menu bar to ensure it points to the Home page.
 - Test carried on the website pages such as  **Home, login, Register, Profile, New Recipe, Manage Brew Methods** pages to ensure each point to respective page. 
 - Test carried on the links and action buttons such as **Search, Reset, Add, Edit, Delete, Save, Clear** to ensure specific action takes place.

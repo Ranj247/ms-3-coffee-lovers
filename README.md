@@ -19,6 +19,9 @@ Coffee Lovers is a website where users can view coffee brewing recipes and contr
     - [Skeleton](#skeleton)
         - [Wireframe mock ups](#wireframe-mock-ups)
     - [Surface](#surface)
+        - [Color Scheme](#color-scheme)
+        - [Typography](#typography)
+        - [Images](#images)
 -  [Technologies used](#technologies-used)
     - [Tools](#tools)
     - [Front-End Technologies](#front-end-technologies)
@@ -95,21 +98,26 @@ The User Experience for this site was planned & developed using the [5 Planes of
 - **Login/Logout:**
     - The Login/Logout functionality adds authentication for registered users, allowing them to access, edit, and delete their own recipes. Allows users to logout by clearing the "session" cookie.
 - **Profile:**
-    - The Profile provides functionality for registered & logged in users to see their own recipes (if any recipe created), add more recipes, edit or delete their existing recipes.
+    - The Profile functionality provides registered & logged in users to see their own recipes (if any recipe created), add more recipes, edit or delete their existing recipes.
 - **Add Recipe:**
-    - The Add Recipe provides functionality for registered users to add their own recipes via a form.
+    - The Add Recipe functionality provides registered users to add their own recipes via a form.
 - **Edit Recipe:**
-    - The Edit Recipe provides functionality for registered users to edit recipes that they've added. Extra checks are in place here to ensure the current user matches the username of the user who created the recipe.
+    - The Edit Recipe functionality provides registered users to edit recipes that they've added. Extra checks are in place here to ensure the current user matches the username of the user who created the recipe.
 - **Delete Recipe:**
-    - The Delete Recipe provides functionality for registered users to delete recipes that they've added. Extra authentication steps are also in place in this feature to ensure that the current username matches that of the recipe's creator.
+    - The Delete Recipe functionality provides registered users to delete recipes that they've added. Extra authentication steps are also in place in this feature to ensure that the current username matches that of the recipe's creator and a pop message appears for reconfirmation.
 - **Manage Brew Methods:**
     - The Manage Brew Methods functionality provides the Admin of the site to view all of the coffee brew methods.
 - **Add Brew Method:**
-    - The Add Brew Method functionality provides a form where the site admin can add new coffee brew method.
+    - The Add Brew Method functionality provides a input field where the site admin can add new coffee brew method.
+- **Edit Brew Method:**
+    - The Edit Brew Method functionality provides a input field where the site admin can edit a coffee brew method.
 - **Delete Brew Method:**
-    - The Delete Brew Method functionality provides functionality for the site admin to remove brew methods from the site.
+    - The Delete Brew Method functionality provides the site admin to remove brew methods from the site. Extra authentication steps are also in place in this feature where a pop message appears for reconfirmation.
 
 #### Features Left to Implement when skills develop
+- To display a collection of coffee brewing equipments for each coffee brewing methods and to include links for users intrested in purchasing them which would generate commission revenues.
+- To include options for the users to vote on the best recipes per their experience.
+- To include option for the users to upload images of the brewing recipes.
 
 ### Structure
 #### Flowchart
@@ -129,7 +137,17 @@ The User Experience for this site was planned & developed using the [5 Planes of
     ![Image](readme-assets/images/0008.png)<br>
 
 ### Surface
+#### Color Scheme
+- Chosen using [Image Color Picker](https://imagecolorpicker.com/en):<br><br>
+    ![Image](readme-assets/images/Color-Pallets.PNG)<br><br>
+- Primary color: #4a6964 (Cutty Sark Color) - This color applies to the header & footer section which maintains contrast to the landing page, and hero image.
+- Background color: #c3c2b3 (Ash Color) - This color applies to the background.
 
+#### Typography
+- Materialize CSS default fonts applied.
+
+#### Images
+- The hero image of coffee being extracted from the coffee machine hints user that the site content relates to a coffee website.
 
 ***
 
@@ -196,8 +214,7 @@ The User Experience for this site was planned & developed using the [5 Planes of
 
 ## Testing
 ### Testing User Stories
-### Compatibility and Responsiveness
-### Validation
+
 ### Manual Testing
 - Test carried on the **Website Logo** which appears on the left of the menu bar to ensure it points to the Home page.
 - Test carried on the website pages such as  **Home, login, Register, Profile, New Recipe, Manage Brew Methods** pages to ensure each point to respective page. 
@@ -206,15 +223,41 @@ The User Experience for this site was planned & developed using the [5 Planes of
 - Checked grammar and spelling throughout document.
 - Ran README text through [Online-Spellcheck](https://www.online-spellcheck.com/) to double-check on grammar and spelling.
 - Ran CSS through [Autoprefixer](https://autoprefixer.github.io/) and copied the resulted CSS codes back into style.css file.
-- Tested [HTML Validation](https://validator.w3.org/) No errors or warnings to show. This validator does not recognise Jinja templates & scripting, so returns errors for the lines of code where Jinja is used - this is to be expected. No errors are present in the HTML code otherwise.
-- Tested [CSS Validation](https://jigsaw.w3.org/css-validator/) No errors found.<br>
-    ![Image](readme-assets/images/CSS-validation-report.PNG)<br><br>
-- Test carried on the Responsiveness of all pages using [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).
-    ![Image](readme-assets/images/Mobile-friendliness-test.PNG)<br><br>
-- Test carried on grounds of Performance, Accessibility, Best Practices and SEO using [Lighthouse Report Viewer](https://googlechrome.github.io/lighthouse/viewer/).
+
+- Test carried on grounds of Performance, Accessibility, Best Practices and SEO using [Lighthouse Report Viewer](https://googlechrome.github.io/lighthouse/viewer/).<br><br>
     ![Image](readme-assets/images/lighthouse-report.PNG)<br><br>
-- Test carried on the overall site colours on [a11y](https://color.a11y.com/), a Color Contrast Accessibility Validator.
+    [Result](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fms-3-coffee-lovers.herokuapp.com%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext<br><br>
+)
+
+- Test carried on the overall site colours on [a11y](https://color.a11y.com/), a Color Contrast Accessibility Validator.<br><br>
     ![Image](readme-assets/images/website-color-contrast-report.PNG)<br><br>
+
+### Compatibility and Responsiveness
+The website has been tested on different browsers and electronic device, no compatibility issues noted. The site was found to be fully responsive on device sizes ranging from 320px X 480px to 1920px X 1080px.
+
+- Browsers tested:
+    - Chrome 
+    - Safari 
+    - Firefox 
+
+- Devices tested:
+    - iPhone 6
+    - Samsung A20
+    - Desktop PC
+    - Laptop
+    - Tablet
+
+- Test carried on the Responsiveness of all pages using [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).<br><br>
+    ![Image](readme-assets/images/Mobile-friendliness-test.PNG)<br>
+
+### Validation
+- Tested [HTML Validation](https://validator.w3.org/) No errors or warnings to show. This validator does not recognise Jinja templates & scripting, so returns errors for the lines of code where Jinja is used - this is to be expected. No errors are present in the HTML code otherwise.
+- Tested [CSS Validation](https://jigsaw.w3.org/css-validator/) No errors found.<br><br>
+    ![Image](readme-assets/images/CSS-validation-report.PNG)<br>
+
+- [JSHint](https://jshint.com/) was used to validate the JavaScript code in the script.js file. No errors are present.
+- [PEP8 Online](http://pep8online.com/) was used to validate that the Python code in app.py is PEP8 compliant. No errors are present.<br><br>
+    ![Image](readme-assets/images/PEP8-report.PNG)<br><br>
 
 ***
 
@@ -310,7 +353,6 @@ To deploy this app on Heroku, the following steps were taken:
 ***
 
 ## Credits
-
 ### Media
 - [favicon.io](https://favicon.io/) was used to generate the site's favicon image.
 - [Pexels](https://www.pexels.com/) used to source Hero image and customised to be used for the website.

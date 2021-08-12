@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-
     <h3 class="center-align">Add Recipe</h3>
-
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
-            
             <!-- coffee brew methods -->
             <div class="row">
                 <div class="input-field col s12">
@@ -19,7 +16,6 @@
                     <label for="coffee_brew_method">Coffee Brew Method</label>
                 </div>
             </div>
-
             <!-- coffee roast level -->
             <div class="row">
                 <div class="input-field col s12">
@@ -33,7 +29,6 @@
                     <label for="roast_level">Coffee Roast Level</label>
                 </div>
             </div>
-
             <!-- grind of bean -->
             <div class="row">
                 <div class="input-field col s12">
@@ -47,7 +42,6 @@
                     <label for="grind_of_bean">Grind Of Bean</label>
                 </div>
             </div>
-
             <!-- quantity of coffee -->
             <div class="row">
                 <div class="input-field col s12">
@@ -61,7 +55,6 @@
                     <label for="quantity_of_coffee">Quantity Of Coffee</label>
                 </div>
             </div>
-
             <!-- brew time -->
             <div class="row">
                 <div class="input-field col s12">
@@ -75,7 +68,6 @@
                     <label for="brew_time">Brew Time</label>
                 </div>
             </div>         
-
             <!-- recipe description -->
             <div class="row">
                 <div class="input-field col s12">
@@ -85,7 +77,6 @@
                     <label for="recipe_description">Recipe Description</label>
                 </div>
             </div>
-
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
@@ -99,5 +90,4 @@
             </div>
         </form>
     </div>
-
 {% endblock %}

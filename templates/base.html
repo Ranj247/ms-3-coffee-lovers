@@ -1,145 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A website for Coffee Lovers to view and share their coffee brewing recipes." />
-  <!-- favicon image link -->
-  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon-32x32.png') }}" />
-  <!-- Fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"
-    type="text/css">
-  <!-- Materialize css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    type="text/css">
-  <!-- stylesheet link -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-  <title>Coffee Lovers</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A website for Coffee Lovers to view and share their coffee brewing recipes." />
+    <!-- favicon image link -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon-32x32.png') }}" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"
+        type="text/css">
+    <!-- Materialize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <title>Coffee Lovers</title>
 </head>
-
 <body>
-  <header>
-    <!--CREDIT: navbar code customized from materializecss-->
-    <!-- Fixed Navbar Structure -->
-    <nav class="nav-extended text-shadow" id="nav-tab">
-      <div class="nav-wrapper container">
-        <a href="{{ url_for('get_recipes') }}" class="brand-logo" id="logo">Coffee Lovers</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-        <ul class="right hide-on-med-and-down" id="nav-menu">
+    <header>
+        <!--CREDIT: navbar code customized from materializecss-->
+        <!-- Fixed Navbar Structure -->
+        <nav class="nav-extended text-shadow" id="nav-tab">
+            <div class="nav-wrapper container">
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo" id="logo">Coffee Lovers</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down" id="nav-menu">
+                    <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                    {% if session.user %}
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
+                    {% if session.user|lower == "admin"|lower %}
+                        <li><a href="{{ url_for('get_coffee_brew_methods') }}">Manage Brew Methods</a></li>
+                    {% endif %}
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+      <!-- mobile sidenav -->
+      <ul class="sidenav" id="mobile-demo">
+          <li><h4 class="center-align">Coffee Lovers</h4></li>
           <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
           {% if session.user %}
-          <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-          <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
+              <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+              <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
           {% if session.user|lower == "admin"|lower %}
-          <li><a href="{{ url_for('get_coffee_brew_methods') }}">Manage Brew Methods</a></li>
+              <li><a href="{{ url_for('get_coffee_brew_methods') }}">Manage Brew Methods</a></li>
           {% endif %}
-          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+              <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           {% else %}
-          <li><a href="{{ url_for('login') }}">Log In</a></li>
-          <li><a href="{{ url_for('register') }}">Register</a></li>
+              <li><a href="{{ url_for('login') }}">Log In</a></li>
+              <li><a href="{{ url_for('register') }}">Register</a></li>
           {% endif %}
-        </ul>
-      </div>
-    </nav>
-
-    <!-- mobile sidenav -->
-    <ul class="sidenav" id="mobile-demo">
-      <li>
-        <h4 class="center-align">Coffee Lovers</h4>
-      </li>
-      <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
-      {% if session.user %}
-      <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-      <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
-      {% if session.user|lower == "admin"|lower %}
-      <li><a href="{{ url_for('get_coffee_brew_methods') }}">Manage Brew Methods</a></li>
-      {% endif %}
-      <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-      {% else %}
-      <li><a href="{{ url_for('login') }}">Log In</a></li>
-      <li><a href="{{ url_for('register') }}">Register</a></li>
-      {% endif %}
-    </ul>
-    <!-- End of site navigation-->
-
-    <!-- Hero Image -->
-    {% block hero %}
-    {% endblock %}
-
+      </ul>
+      <!-- End of site navigation-->
+      <!-- Hero Image -->
+      {% block hero %}
+      {% endblock %}
   </header>
-
   <!-- flash messages -->
   <section class="page-heading">
       {% with messages = get_flashed_messages() %}
       {% if messages %}
       {% for message in messages %}
-      <div class="container flashes text-shadow">
-        <h4 class="brown center-align">{{ message }}</h4>
-      </div>
+          <div class="container flashes text-shadow">
+              <h4 class="brown center-align">{{ message }}</h4>
+          </div>
       {% endfor %}
       {% endif %}
       {% endwith %}
   </section>
-
   <!-- main content -->
   <main class="container">
-    {% block content %}
-    {% endblock %}
+      {% block content %}
+      {% endblock %}
   </main>
-
   <!-- Footer -->
   <!-- Credit: Inspiration / code  taken from Materialize CSS and customized.-->
   <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5>Contact Us</h5>
-          <p>Send an email to get in touch with the site admin!</p>
-          <p id="Email-link"><strong>Email:</strong> <a href="mailto:roabb2121@gmail.com"
-              target="_blank">roabb2121@gmail.com</a></p>
-        </div>
-        <div class="col l4 offset-l2 s12 social-networks-links">
-          <h6>Social Media</h6>
-          <ul>
-            <li>
-              <a target="_blank" rel="noreferrer" href="https://ie.linkedin.com/">
-                <i class="fab fa-linkedin"></i> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a target="_blank" rel="noreferrer" href="https://twitter.com/?lang=en">
-                <i class="fab fa-twitter"></i> Twitter
-              </a>
-            </li>
-            <li>
-              <a target="_blank" rel="noreferrer" href="https://instagram.com">
-                <i class="fab fa-instagram"></i> Instagram
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
       <div class="container">
-        &copy; 2021 Coffee Lovers
+          <div class="row">
+              <div class="col l6 s12">
+                  <h5>Contact Us</h5>
+                  <p>Send an email to get in touch with the site admin!</p>
+                  <p id="Email-link"><strong>Email:</strong>
+                      <a href="mailto:roabb2121@gmail.com" target="_blank">
+                          roabb2121@gmail.com
+                      </a>
+                  </p>
+              </div>
+              <div class="col l4 offset-l2 s12 social-networks-links">
+                  <h6>Social Media</h6>
+                  <ul>
+                      <li><a target="_blank" rel="noreferrer" href="https://ie.linkedin.com/"><i class="fab fa-linkedin"></i> LinkedIn </a></li>
+                      <li><a target="_blank" rel="noreferrer" href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i> Twitter </a></li>
+                      <li><a target="_blank" rel="noreferrer" href="https://instagram.com"><i class="fab fa-instagram"></i> Instagram </a></li>
+                  </ul>
+              </div>
+          </div>
       </div>
-    </div>
+      <div class="footer-copyright">
+          <div class="container">
+              &copy; 2021 Coffee Lovers
+          </div>
+      </div>
   </footer>
-
-
   <!-- jQuery cdn -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
   </script>
   <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <!-- script.js link -->
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
 </body>
-
 </html>

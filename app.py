@@ -277,6 +277,14 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Error Handling decorator for custom error page
+# Adapted from Flask documentation:
+# https://flask.palletsprojects.com/en/2.0.x/quickstart/#redirects-and-errors
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404
+
+
 # Set how & where to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

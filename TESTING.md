@@ -13,9 +13,9 @@
 ***
 
 ## Demo
-[Main README.md file]()
+[Main README.md file](https://github.com/Ranj247/ms-3-coffee-lovers/blob/main/README.md)
 
-[Project Repository]()
+[Project Repository](https://github.com/Ranj247/ms-3-coffee-lovers)
 
 A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)
 
@@ -26,6 +26,7 @@ A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)
 
 ### Testing User Stories
 Testing User Stories from User Experience (UX) Section
+
 As a first-time visitor to the website, I want to:
 - explore all the coffee recipes on the website added by different users.
     - The landing page has heading called, All Recipes, and below that all the recipes added by other users are displayed.
@@ -191,14 +192,15 @@ The website has been tested on different browsers and electronic device, no comp
     - Laptop
     - Tablet
 
-- Test carried on the Responsiveness of all pages using [Responsive Design Checker](https://responsivedesignchecker.com/).<br><br>
+- Test carried on the Responsiveness of all pages using [Responsive Design Checker](https://responsivedesignchecker.com/).
+
 - Test carried on the Responsiveness of all pages using [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).<br><br>
     ![Image](readme-assets/images/Mobile-friendliness-test.PNG)<br><br>
 
 ### Validation
 - Tested [HTML Validation](https://validator.w3.org/) No errors or warnings to show. This validator does not recognise Jinja templates & scripting, so returns errors for the lines of code where Jinja is used - this is to be expected. No errors are present in the HTML code otherwise.
 - Tested [CSS Validation](https://jigsaw.w3.org/css-validator/) No errors found.<br><br>
-    ![Image](readme-assets/images/CSS-validation-report.PNG)<br>
+    ![Image](readme-assets/images/CSS-validation-report.PNG)<br><br>
 
 - [JSHint](https://jshint.com/) was used to validate the JavaScript code in the script.js file. No errors are present.
 - [PEP8 Online](http://pep8online.com/) was used to validate that the Python code in app.py is PEP8 compliant. No errors are present.<br><br>

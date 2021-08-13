@@ -47,6 +47,8 @@ Please click on the image to open link in a new browser window.<br><br>
 
 A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)
 
+[Project Repository](https://github.com/Ranj247/ms-3-coffee-lovers)
+
 ***
 
 ## Overview
@@ -207,7 +209,7 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ***
 
 ## Testing
-Testing documentation can be found in a separate file [TESTING.md]()
+Testing documentation can be found in a separate file [TESTING.md](https://github.com/Ranj247/ms-3-coffee-lovers/blob/main/TESTING.md)
 
 ***
 

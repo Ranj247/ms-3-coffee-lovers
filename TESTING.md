@@ -13,17 +13,16 @@
 ***
 
 ## Demo
-[Main README.md file](https://github.com/Ranj247/ms-3-coffee-lovers/blob/main/README.md)
-
-[Project Repository](https://github.com/Ranj247/ms-3-coffee-lovers)
-
 A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)
+
+Main README.md file can be found - [here](https://github.com/Ranj247/ms-3-coffee-lovers/blob/main/README.md)
+
+Project Repository can be found - [here](https://github.com/Ranj247/ms-3-coffee-lovers)
+
 
 ***
 
 ## Testing
-A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)
-
 ### Testing User Stories
 Testing User Stories from User Experience (UX) Section
 

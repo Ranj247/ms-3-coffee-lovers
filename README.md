@@ -47,7 +47,7 @@ Please click on the image to open link in a new browser window.<br><br>
 
 A live demo can be found - [here](https://ms-3-coffee-lovers.herokuapp.com/)
 
-[Project Repository](https://github.com/Ranj247/ms-3-coffee-lovers)
+Project Repository can be found - [here](https://github.com/Ranj247/ms-3-coffee-lovers)
 
 ***
 
